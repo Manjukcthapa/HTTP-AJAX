@@ -17,20 +17,6 @@ class App extends Component {
     }
   }
 
-  changeHandler = e => {
-    this.setState({[e.target.name]:e.target.value})
-  }
-
-  addNewFriend = e => {
-    this.setState({
-      id: uuidv4(),
-      name: this.state.name,
-      age: this.state.age,
-      email:this.state.email
-    })
-
-  }
-
   async componentDidMount() {
     try {
       let res = await axios.get('http://localhost:5000/friends');
@@ -39,6 +25,26 @@ class App extends Component {
       console.error(err)
     }
   }
+
+  changeHandler = e => {
+    e.preventDefault();
+    this.setState({[e.target.name]:e.target.value})
+  }
+
+  addNewFriend = e => {
+    e.preventDefault();
+ const friend= {
+      id: uuidv4(),
+      name: this.state.name,
+      age: this.state.age,
+      email:this.state.email
+    }
+    axios
+    .post('http://localhost:5000/friends',  friend)
+    .then( res => this.setState({ friends: res.data })) 
+    .catch (error => console.log('Error: ', error ))
+  }
+  
   
   // componentDidMount() {
   //   axios
@@ -51,7 +57,7 @@ class App extends Component {
     return (
       <div>
       <FriendsList friends={this.state.friends} />
-      <NewFriendForm addNewFriend={this.addNewFriend} changeHandler={this.changeHandler}/>
+      <NewFriendForm addNewFriend={this.addNewFriend} changeHandler={this.changeHandler} {...this.state}/>
       </div>
     )
   }
