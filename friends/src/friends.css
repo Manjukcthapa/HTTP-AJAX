@@ -1,0 +1,47 @@
+.friendlist{
+    margin-left: 200px;
+    text-align: center;
+    width:50%
+    
+}
+
+.friendscard{
+    border:1px solid black;
+    margin-left:200px;
+    margin-bottom:30px;
+    border-radius: 10px;
+    background: #87B9CB;
+
+    
+}
+
+.friendform{
+    margin-left:500px;
+    margin-top: 50px;
+    margin-bottom:30px;
+    border-radius: 10px;
+    background: #87B9CB;
+    border:1px solid black;
+    width:250px;
+
+}
+
+.friends{
+height:30px;
+width:200px;
+margin-left: 20px;
+margin-top:10px;
+background: #EEF0E5;
+}
+
+.buttonform{
+    margin-left: 20px;
+    margin-top: 10px;
+    height:50px;
+    width:200px;
+    margin-bottom: 10px;
+}
+
+.card{
+    margin-top:30px;
+}
