@@ -2,11 +2,12 @@ import React from 'react';
 import FriendCard from "./FriendCard"
 import './friends.css';
 
-const FriendsList = ({friends,updateFriends,DeleteFriendList}) => {
+const FriendsList = props => {
     return (
         <div className="friendlist">
-            {friends.map((card, index) => {
-                return <FriendCard key={index} friends={card} updateFriends={updateFriends} DeleteFriendList={DeleteFriendList} />
+            {props.friends.map((card, id) => {
+                return <FriendCard key={id} friends={card} updateFriends={props.updateFriends} 
+                deleteFriendButton = {props.deleteFriendButton}/>
             })}
         </div>
     )
