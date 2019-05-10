@@ -16,21 +16,30 @@
 }
 
 .friendform{
-    margin-left:400px;
+    margin-left:500px;
     margin-top: 50px;
     margin-bottom:30px;
+    border-radius: 10px;
+    background: #87B9CB;
+    border:1px solid black;
+    width:250px;
+
 }
 
 .friends{
 height:30px;
-width:100px;
+width:200px;
 margin-left: 20px;
+margin-top:10px;
+background: #EEF0E5;
 }
 
 .buttonform{
     margin-left: 20px;
-    height:30px;
-    width:100px;
+    margin-top: 10px;
+    height:50px;
+    width:200px;
+    margin-bottom: 10px;
 }
 
 .card{
